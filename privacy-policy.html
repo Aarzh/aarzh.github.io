@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — EIVO</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --green: #3ddc84;
+      --green-dim: #2ab56a;
+      --green-glow: rgba(61, 220, 132, 0.12);
+      --white: #f5f5f0;
+      --gray: #888;
+      --border: rgba(61, 220, 132, 0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* Subtle background texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(61, 220, 132, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-ring {
+      width: 32px;
+      height: 32px;
+    }
+
+    .logo-wordmark {
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      color: var(--green);
+    }
+
+    .header-tag {
+      margin-left: auto;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--gray);
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .doc-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 em {
+      color: var(--green);
+      font-style: italic;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: var(--gray);
+      font-family: 'DM Mono', monospace;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--green);
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #c8c8c0;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      color: #c8c8c0;
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--green-dim);
+      font-size: 0.8rem;
+    }
+
+    .highlight-box {
+      background: var(--green-glow);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: #b0c8b8;
+    }
+
+    .highlight-box strong {
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-color: var(--green); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--gray);
+      border-top: 1px solid var(--border);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- Simple open-ring SVG logo mark -->
+  <svg class="logo-ring" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="11" stroke="url(#g1)" stroke-width="4" stroke-linecap="round"
+      stroke-dasharray="56 12" stroke-dashoffset="4" />
+    <defs>
+      <linearGradient id="g1" x1="5" y1="5" x2="27" y2="27" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#6effc0"/>
+        <stop offset="100%" stop-color="#1fa85c"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <span class="logo-wordmark">EIVO</span>
+  <span class="header-tag">Legal</span>
+</header>
+
+<main>
+  <p class="doc-label">Documento legal · Agente de Cobranza</p>
+  <h1>Política de <em>Privacidad</em></h1>
+  <p class="meta">Última actualización: abril 2025 &nbsp;·&nbsp; Versión 1.0</p>
+
+  <section>
+    <h2>1. Responsable del tratamiento</h2>
+    <p>
+      EIVO (en adelante, "EIVO", "nosotros" o "la empresa") es responsable del tratamiento de los datos personales
+      recopilados a través de su Agente de Cobranza automatizado, que opera mediante la plataforma de mensajería
+      WhatsApp Business.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Datos que recopilamos</h2>
+    <p>El Agente de Cobranza de EIVO procesa exclusivamente los siguientes datos personales proporcionados por nuestros clientes (empresas) para la ejecución del servicio:</p>
+    <ul>
+      <li>Nombre del deudor o contacto</li>
+      <li>Número de teléfono (WhatsApp)</li>
+      <li>Monto de deuda o factura pendiente</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>Importante:</strong> EIVO no recopila datos directamente de los destinatarios de los mensajes. Los datos son proporcionados por la empresa cliente que contrata el servicio y son utilizados únicamente para el envío de recordatorios de pago.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Finalidad del tratamiento</h2>
+    <p>Los datos personales se utilizan exclusivamente para:</p>
+    <ul>
+      <li>Enviar notificaciones y recordatorios de pago automatizados vía WhatsApp</li>
+      <li>Identificar correctamente al destinatario del mensaje</li>
+      <li>Personalizar el contenido del mensaje con el nombre y monto correspondiente</li>
+    </ul>
+    <p>No utilizamos los datos para fines distintos a los descritos, ni para publicidad, perfilado o análisis comercial de terceros.</p>
+  </section>
+
+  <section>
+    <h2>4. Base legal del tratamiento</h2>
+    <p>
+      El tratamiento de datos se realiza con base en el contrato de prestación de servicios celebrado entre EIVO y la empresa cliente, quien es la responsable de contar con el fundamento legal adecuado para compartir los datos de sus contactos con EIVO (consentimiento, relación contractual previa, interés legítimo, según aplique).
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Comunicaciones enviadas</h2>
+    <p>
+      El Agente de Cobranza opera exclusivamente en modalidad de envío (outbound). Esto significa que:
+    </p>
+    <ul>
+      <li>Los mensajes son enviados de forma automatizada por EIVO en nombre del cliente</li>
+      <li>El sistema no procesa ni almacena respuestas de los destinatarios</li>
+      <li>Cada mensaje incluye información de identificación del remitente (la empresa cliente)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Compartición de datos con terceros</h2>
+    <p>Para la prestación del servicio, EIVO utiliza los siguientes proveedores tecnológicos que pueden tener acceso a los datos:</p>
+    <ul>
+      <li><strong style="color:var(--white)">Meta Platforms (WhatsApp Business API)</strong> — plataforma de mensajería</li>
+      <li><strong style="color:var(--white)">n8n</strong> — motor de automatización de flujos</li>
+    </ul>
+    <p>Estos proveedores actúan como encargados del tratamiento y están sujetos a sus propias políticas de privacidad. EIVO no vende ni cede datos personales a terceros con fines comerciales.</p>
+  </section>
+
+  <section>
+    <h2>7. Conservación de datos</h2>
+    <p>
+      Los datos personales se conservan únicamente durante el tiempo necesario para ejecutar el servicio contratado. Una vez concluida la relación comercial con el cliente, los datos son eliminados de nuestros sistemas en un plazo máximo de 30 días naturales, salvo obligación legal en contrario.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Derechos de los titulares</h2>
+    <p>
+      De acuerdo con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) de México, los titulares de los datos tienen derecho a:
+    </p>
+    <ul>
+      <li>Acceder a sus datos personales</li>
+      <li>Rectificar datos inexactos o incompletos</li>
+      <li>Cancelar el tratamiento de sus datos</li>
+      <li>Oponerse al uso de sus datos</li>
+    </ul>
+    <p>Para ejercer estos derechos, el titular puede ponerse en contacto con EIVO a través de los canales oficiales que se publicarán próximamente. Responderemos en un plazo máximo de 20 días hábiles.</p>
+  </section>
+
+  <section>
+    <h2>9. Seguridad de la información</h2>
+    <p>
+      EIVO implementa medidas técnicas y organizativas adecuadas para proteger los datos personales contra pérdida, acceso no autorizado, divulgación o alteración. El acceso a los datos está restringido al personal y sistemas estrictamente necesarios para la prestación del servicio.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Cambios a esta política</h2>
+    <p>
+      EIVO se reserva el derecho de actualizar esta Política de Privacidad en cualquier momento. Las modificaciones se publicarán en esta misma página con la fecha de actualización correspondiente. El uso continuado del servicio implica la aceptación de los cambios.
+    </p>
+  </section>
+
+  <hr class="divider" />
+
+  <section>
+    <h2>Contacto</h2>
+    <p>Para cualquier consulta sobre el tratamiento de tus datos personales, los canales de contacto oficiales de EIVO estarán disponibles próximamente.</p>
+    <ul>
+      <li>Empresa: EIVO Automatización con IA</li>
+      <li>País: México</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  © 2025 EIVO · Todos los derechos reservados · México
+</footer>
+
+</body>
+</html>
